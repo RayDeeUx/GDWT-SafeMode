@@ -1,6 +1,7 @@
 #include <Geode/modify/PlayLayer.hpp>
 #include <Geode/modify/GJGameLevel.hpp>
 #include <Geode/modify/GameStatsManager.hpp>
+#include <Geode/modify/CurrencyRewardLayer.hpp>
 
 using namespace geode::prelude;
 
@@ -73,5 +74,12 @@ class $modify(GameStatsManager) {
 class $modify(GJGameLevel) {
 	void savePercentage(int percent, bool isPracticeMode, int clicks, int attempts, bool isChkValid) {
 		return;
+	}
+};
+
+class $modify(CurrencyRewardLayer) {
+	bool init(int orbs, int stars, int moons, int diamonds, CurrencySpriteType demonKey, int keyCount, CurrencySpriteType shardType, int shardsCount, cocos2d::CCPoint position, CurrencyRewardType rewardType, float yOffset, float time) {
+		if (!CurrencyRewardLayer::init(0, 0, 0, 0, demonKey, 0, shardType, 0, position, rewardType, yOffset, time)) return false;
+		return true;
 	}
 };
