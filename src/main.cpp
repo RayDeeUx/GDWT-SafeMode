@@ -10,6 +10,12 @@ class $modify(PlayLayer) {
 		PlayLayer::playEndAnimationToPos(position);
 		this->m_isTestMode = origTestmode;
 	}
+	void playPlatformerEndAnimationToPos(cocos2d::CCPoint position) {
+		bool origTestmode = this->m_isTestMode;
+		this->m_isTestMode = true;
+		PlayLayer::playPlatformerEndAnimationToPos(position);
+		this->m_isTestMode = origTestmode;
+	}
 	void levelComplete() {
 		bool origTestmode = this->m_isTestMode;
 		this->m_isTestMode = true;
