@@ -80,6 +80,12 @@ class $modify(GJGameLevel) {
 class $modify(CurrencyRewardLayer) {
 	bool init(int orbs, int stars, int moons, int diamonds, CurrencySpriteType demonKey, int keyCount, CurrencySpriteType shardType, int shardsCount, cocos2d::CCPoint position, CurrencyRewardType rewardType, float yOffset, float time) {
 		if (!CurrencyRewardLayer::init(0, 0, 0, 0, demonKey, 0, shardType, 0, position, rewardType, yOffset, time)) return false;
+		this->m_orbs = 0;
+		this->m_stars = 0;
+		this->m_moons = 0;
+		this->m_diamonds = 0;
+		this->m_keys = 0;
+		this->m_shards = 0;
 		return true;
 	}
 };
