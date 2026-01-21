@@ -6,8 +6,8 @@
 		"ios": "2.2074",
 		"android": "2.2074"
 	},
-	"id": "raydeeux.gdwt-safemode",
-	"name": "GDWTSafeMode",
+	"id": "raydeeux.safemode",
+	"name": "SafeMode",
 	"version": "v1.0.0",
 	"developer": "RayDeeUx",
 	"description": "Emergency mod to disable stat gains.",
