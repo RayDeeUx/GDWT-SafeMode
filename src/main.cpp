@@ -63,6 +63,9 @@ class $modify(PlayLayer) {
 		this->m_orbs = origOrbs;
 		this->m_diamonds = origDiamonds;
 	}
+	void showNewBest(bool newReward, int orbs, int diamonds, bool demonKey, bool noRetry, bool noTitle) {
+		return;
+	}
 };
 
 class $modify(GameStatsManager) {
