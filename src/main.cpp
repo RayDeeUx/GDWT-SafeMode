@@ -7,20 +7,47 @@ class $modify(PlayLayer) {
 	void playEndAnimationToPos(cocos2d::CCPoint position) {
 		bool origTestmode = this->m_isTestMode;
 		this->m_isTestMode = true;
+		int origOrbs = this->m_orbs;
+		this->m_orbs = 0;
+		int origDiamonds = this->m_diamonds;
+		this->m_diamonds = 0;
 		PlayLayer::playEndAnimationToPos(position);
 		this->m_isTestMode = origTestmode;
+		this->m_orbs = origOrbs;
+		this->m_diamonds = origDiamonds;
 	}
 	void playPlatformerEndAnimationToPos(cocos2d::CCPoint position, bool p0) {
 		bool origTestmode = this->m_isTestMode;
 		this->m_isTestMode = true;
+		int origOrbs = this->m_orbs;
+		this->m_orbs = 0;
+		int origDiamonds = this->m_diamonds;
+		this->m_diamonds = 0;
 		PlayLayer::playPlatformerEndAnimationToPos(position, p0);
 		this->m_isTestMode = origTestmode;
+		this->m_orbs = origOrbs;
+		this->m_diamonds = origDiamonds;
 	}
 	void levelComplete() {
 		bool origTestmode = this->m_isTestMode;
 		this->m_isTestMode = true;
+		int origOrbs = this->m_orbs;
+		this->m_orbs = 0;
+		int origDiamonds = this->m_diamonds;
+		this->m_diamonds = 0;
 		PlayLayer::levelComplete();
 		this->m_isTestMode = origTestmode;
+		this->m_orbs = origOrbs;
+		this->m_diamonds = origDiamonds;
+	}
+	void postUpdate() {
+		int origOrbs = this->m_orbs;
+		this->m_orbs = 0;
+		int origDiamonds = this->m_diamonds;
+		this->m_diamonds = 0;
+		PlayLayer::postUpdate();
+		this->m_orbs = origOrbs;
+		this->m_diamonds = origDiamonds;
 	}
 };
 
