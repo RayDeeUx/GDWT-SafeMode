@@ -50,14 +50,14 @@ class $modify(PlayLayer) {
 		this->m_orbs = origOrbs;
 		this->m_diamonds = origDiamonds;
 	}
-	void postUpdate() {
+	void postUpdate(float dt) {
 		int origOrbs = this->m_orbs;
 		int origDiamonds = this->m_diamonds;
 
 		this->m_orbs = 0;
 		this->m_diamonds = 0;
 
-		PlayLayer::postUpdate();
+		PlayLayer::postUpdate(dt);
 
 		this->m_orbs = origOrbs;
 		this->m_diamonds = origDiamonds;
