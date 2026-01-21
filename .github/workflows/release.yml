@@ -40,12 +40,11 @@ jobs:
         uses: geode-sdk/build-geode-mod@main
         with:
           sdk: "v4.10.0"
-          configure-args: "SKIP_BUILDING_CODEGEN=OFF"
-          build-args: "SKIP_BUILDING_CODEGEN=OFF"
+          configure-args: "-SKIP_BUILDING_CODEGEN=OFF"
           # build-config: RelWithDebInfo
           # export-pdb: true
-          # bindings: RayDeeUx/bindings
-          # bindings-ref: "foobar"
+          bindings: geode-sdk/bindings
+          bindings-ref: 23d6ae0
           combine: true
           target: ${{ matrix.config.target }}
 
