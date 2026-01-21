@@ -1,4 +1,5 @@
 #include <Geode/modify/PlayLayer.hpp>
+#include <Geode/modify/GJGameLevel.hpp>
 #include <Geode/modify/GameStatsManager.hpp>
 
 using namespace geode::prelude;
@@ -65,6 +66,12 @@ class $modify(PlayLayer) {
 
 class $modify(GameStatsManager) {
 	void setStat(char const* key, int value) {
+		return;
+	}
+};
+
+class $modify(GJGameLevel) {
+	void savePercentage(int percent, bool isPracticeMode, int clicks, int attempts, bool isChkValid) {
 		return;
 	}
 };
