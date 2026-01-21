@@ -39,7 +39,9 @@ jobs:
       - name: Build the mod (Release)
         uses: geode-sdk/build-geode-mod@main
         with:
-          sdk: nightly
+          sdk: "v4.10.0"
+          configure-args: "SKIP_BUILDING_CODEGEN=OFF"
+          build-args: "SKIP_BUILDING_CODEGEN=OFF"
           # build-config: RelWithDebInfo
           # export-pdb: true
           # bindings: RayDeeUx/bindings

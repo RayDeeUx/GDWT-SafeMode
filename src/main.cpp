@@ -1,11 +1,9 @@
-#include <Geode/modify/MenuLayer.hpp>
+#include <Geode/modify/GameStatsManager.hpp>
 
 using namespace geode::prelude;
 
-class $modify(MyMenuLayer, MenuLayer) {
-	bool init() {
-		if (!MenuLayer::init()) return false;
-
-		return true;
+class $modify(GameStatsManager) {
+	void setStat(char const* key, int value) {
+		return;
 	}
 };
